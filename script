@@ -1,0 +1,39 @@
+
+const photos = document.querySelectorAll(".photo img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const closeButton = document.getElementById("closeLightbox");
+
+function openPhoto(image) {
+  lightboxImage.src = image.src;
+  lightboxImage.alt = image.alt;
+  lightbox.classList.add("active");
+  lightbox.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  closeButton.focus();
+}
+
+function closePhoto() {
+  lightbox.classList.remove("active");
+  lightbox.setAttribute("aria-hidden", "true");
+  lightboxImage.src = "";
+  document.body.style.overflow = "";
+}
+
+photos.forEach((photo) => {
+  photo.addEventListener("click", () => openPhoto(photo));
+});
+
+closeButton.addEventListener("click", closePhoto);
+
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    closePhoto();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closePhoto();
+  }
+});

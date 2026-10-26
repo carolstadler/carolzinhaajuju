@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07152e">
+  <title>Jujuzinha 💙 Carolzinha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="heart">♡</div>
+    <p class="eyebrow">UM CANTINHO SÓ NOSSO</p>
+    <h1>Jujuzinha <span>💙</span><br>Carolzinha</h1>
+    <p class="subtitle">
+      Meu lugar favorito sempre vai ser pertinho de você.
+    </p>
+    <p class="intro">
+      Um pouquinho da nossa história, das nossas memórias
+      e de todo o amor que existe entre nós duas. ♡
+    </p>
+    <a href="#momentos" class="button">Ver nossas lembranças ↓</a>
+  </header>
+
+  <main>
+    <section id="momentos" class="section">
+      <p class="eyebrow">NOSSO ÁLBUM</p>
+      <h2>Pequenos momentos,<br>grandes lembranças.</h2>
+      <p class="description">
+        Cada fotinho guarda um pedacinho da nossa história.
+        Nossos abraços, nossas brincadeiras, nossos beijinhos
+        e até nossas caras bobas. São lembranças que parecem
+        simples, mas que significam muito porque foram vividas
+        com você. 🩵
+      </p>
+
+      <div class="gallery">
+        <figure class="photo">
+          <img src="fotos/foto1.jpg" alt="Nossa lembrança 1">
+        </figure>
+        <figure class="photo">
+          <img src="fotos/foto2.jpg" alt="Nossa lembrança 2">
+        </figure>
+        <figure class="photo">
+          <img src="fotos/foto3.jpg" alt="Nossa lembrança 3">
+        </figure>
+        <figure class="photo">
+          <img src="fotos/foto4.jpg" alt="Nossa lembrança 4">
+        </figure>
+        <figure class="photo">
+          <img src="fotos/foto5.jpg" alt="Nossa lembrança 5">
+        </figure>
+        <figure class="photo">
+          <img src="fotos/foto6.jpg" alt="Nossa lembrança 6">
+        </figure>
+        <figure class="photo">
+          <img src="fotos/foto7.jpg" alt="Nossa lembrança 7">
+        </figure>
+        <figure class="photo">
+          <img src="fotos/foto8.jpg" alt="Nossa lembrança 8">
+        </figure>
+      </div>
+      <p class="photo-tip">Toque nas fotos para vê-las maiores. 💙</p>
+    </section>
+
+    <section class="section letter-section">
+      <p class="eyebrow">ABRE QUANDO QUISER</p>
+      <h2>Uma cartinha<br>para você. 💌</h2>
+
+      <article class="letter">
+        <h3>Meu amor!</h3>
+        <p>
+          Se eu pudesse te explicar tudo o que você significa
+          para mim, ainda faltariam palavras. Você é uma parte
+          muito especial da minha vida, alguém com quem quero
+          compartilhar meus dias, minhas conquistas, meus sonhos
+          e até as pequenas coisas do cotidiano.
+        </p>
+        <p>
+          Eu amo nossos momentos, nossos abraços e a maneira
+          como conseguimos criar lembranças que são só nossas.
+          Quero continuar descobrindo o mundo ao seu lado,
+          aprendendo com você e construindo nossa história,
+          um dia de cada vez.
+        </p>
+        <p>
+          Obrigada por fazer parte da minha vida e por ser o
+          meu amor! Que a gente nunca perca a vontade de cuidar
+          uma da outra, de rir juntas e de escolher o nosso amor
+          todos os dias.
+        </p>
+        <p class="signature">
+          Com todo o amor do mundo,<br>
+          da sua Carolzinha. 💙
+        </p>
+      </article>
+    </section>
+
+    <section class="section future-section">
+      <p class="eyebrow">NOSSOS SONHOS</p>
+      <h2>Ainda temos tantos<br>sonhos para viver…</h2>
+      <div class="future-card">
+        <span class="house">🏡</span>
+        <p>
+          Imagino tantas coisas bonitas para nós: nossa casinha,
+          nossos planos, nossas viagens, nossas conquistas e os
+          dias comuns que se tornam especiais só porque estamos
+          juntas.
+        </p>
+        <p>
+          Não precisamos saber exatamente como tudo vai acontecer.
+          Quero que a gente continue sonhando, crescendo e
+          construindo, aos pouquinhos, um futuro que tenha a
+          nossa cara.
+        </p>
+        <p>
+          E, quando pensarmos em tudo o que ainda queremos viver,
+          que sempre exista um espacinho para nós duas. Você,
+          eu e muitos capítulos lindos pela frente. 🏡💙
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-heart">♡</div>
+    <p>Feito com amor, para a minha pessoa favorita.</p>
+    <p>Eu te amo! 🩵</p>
+    <small>Jujuzinha & Carolzinha</small>
+  </footer>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="closeLightbox" class="close-lightbox"
+      aria-label="Fechar foto">×</button>
+    <img id="lightboxImage" src="" alt="Foto ampliada">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

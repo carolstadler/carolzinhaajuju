@@ -1,0 +1,375 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --background: #07152e;
+  --background-light: #0d2040;
+  --card: #102747;
+  --blue: #8dbbff;
+  --light-blue: #c5dcff;
+  --white: #f4f7ff;
+  --muted: #b0bfd9;
+  --border: rgba(173, 202, 255, 0.17);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 25px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--background);
+  color: var(--white);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 25%, #183d70 0%, transparent 58%),
+    linear-gradient(180deg, #091a36, #07152e);
+}
+
+.hero::before,
+.hero::after {
+  content: '✦';
+  position: absolute;
+  color: rgba(197, 220, 255, 0.45);
+  font-size: 25px;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+.hero::before {
+  top: 19%;
+  left: 13%;
+}
+
+.hero::after {
+  right: 14%;
+  bottom: 22%;
+  animation-delay: 1.5s;
+}
+
+.heart {
+  color: var(--light-blue);
+  font-size: 55px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h1,
+h2,
+.letter h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(2.7rem, 7vw, 5.5rem);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+h1 span {
+  font-size: 0.7em;
+}
+
+.subtitle {
+  color: var(--light-blue);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin-top: 28px;
+}
+
+.intro {
+  color: var(--muted);
+  max-width: 540px;
+  margin-top: 12px;
+  font-size: 0.98rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 13px 25px;
+  border: 1px solid rgba(197, 220, 255, 0.5);
+  border-radius: 50px;
+  color: var(--white);
+  background: rgba(141, 187, 255, 0.1);
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background: var(--blue);
+  color: var(--background);
+  transform: translateY(-3px);
+}
+
+.section {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 100px 25px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  line-height: 1.25;
+  margin-bottom: 25px;
+}
+
+.description {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  color: var(--muted);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.photo {
+  height: 260px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.photo:hover img {
+  transform: scale(1.05);
+}
+
+.photo-tip {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 22px;
+}
+
+.letter-section {
+  max-width: 850px;
+}
+
+.letter {
+  padding: clamp(25px, 5vw, 55px);
+  margin-top: 35px;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background:
+    linear-gradient(145deg, rgba(24, 55, 95, 0.85), rgba(12, 31, 59, 0.95));
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.letter h3 {
+  color: var(--light-blue);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.letter p {
+  color: #d6e1f5;
+  margin-bottom: 20px;
+}
+
+.letter .signature {
+  color: var(--light-blue);
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.future-section {
+  padding-top: 70px;
+  padding-bottom: 110px;
+}
+
+.future-card {
+  max-width: 700px;
+  margin: 35px auto 0;
+  padding: clamp(25px, 5vw, 45px);
+  background: var(--background-light);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+}
+
+.future-card p {
+  color: #d6e1f5;
+  margin-top: 18px;
+}
+
+.house {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+footer {
+  padding: 55px 20px;
+  text-align: center;
+  background: #050f22;
+  border-top: 1px solid var(--border);
+}
+
+.footer-heart {
+  color: var(--blue);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: var(--light-blue);
+  margin-bottom: 5px;
+}
+
+footer small {
+  display: block;
+  color: var(--muted);
+  margin-top: 15px;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  padding: 50px 20px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 7, 18, 0.95);
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 95%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.35; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@media (max-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .photo {
+    height: 240px;
+  }
+
+  .section {
+    padding: 75px 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero {
+    padding: 65px 22px;
+  }
+
+  .eyebrow {
+    letter-spacing: 2.5px;
+    font-size: 0.68rem;
+  }
+
+  .gallery {
+    gap: 10px;
+  }
+
+  .photo {
+    height: 190px;
+    border-radius: 13px;
+  }
+
+  .letter {
+    padding: 23px;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
